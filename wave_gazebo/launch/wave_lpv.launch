@@ -37,7 +37,7 @@
   </include>
 
  <!-- Load robot model -->
-  <arg name="urdf" default="$(find aimm)/urdf/boat_model_2.urdf.xacro"/>
+  <arg name="urdf" default="$(find lpv_gazebo)/urdf/lpv_gazebo.urdf.xacro"/>
   <param name="lpv0/robot_description"
          command="$(find xacro)/xacro &#x002D;&#x002D;inorder '$(arg urdf)'
          thruster_config:=$(arg thrust_config)
@@ -58,13 +58,13 @@
          ground_truth_enabled:=$(arg ground_truth_enabled)
          namespace:=lpv1 "/>
 
-  <!-- Spawn model in Gazebo -->
+  <!-- Spawn WAMV model in Gazebo -->
   <node name="spawn_model_lpv0" pkg="gazebo_ros" type="spawn_model"
   args="-x $(arg x) -y $(arg y) -z $(arg z)
         -R $(arg R) -P $(arg P) -Y $(arg Y)
         -urdf -param lpv0/robot_description -model lpv0"/>
 
-  <!-- Spawn model in Gazebo -->
+  <!-- Spawn WAMV model in Gazebo -->
   <node name="spawn_model_lpv1" pkg="gazebo_ros" type="spawn_model"
   args="-x $(arg x) -y 6 -z $(arg z)
         -R $(arg R) -P $(arg P) -Y 1.57

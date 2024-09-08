@@ -29,7 +29,7 @@
       <pose> 0 0 0.2 0 0 0 </pose>
       <uri>model://sydney_regatta</uri>
     </include>
-    <!-- The posts for securing the WAM-V -->
+    <!-- The posts for securing the LPV-4 -->
     <include>
       <name>post_0</name>
       <pose>-535.916809 154.362869 0.675884 -0.17182 0.030464 -0.005286</pose>
@@ -45,7 +45,7 @@
       <pose>-544.832825 156.671951 0.499025 -0.162625 0 0 </pose>
       <uri>model://post</uri>
     </include>
-    <!-- Antenna for communication with the WAM-V -->
+    <!-- Antenna for communication with the LPV-4 -->
     <include>
       <pose>-531.063721 147.668579 1.59471 -0.068142 0 -0.1</pose>
       <uri>model://antenna</uri>
@@ -184,7 +184,7 @@
         </visual>
       </link>
     </model>
-    <!--Gazebo Plugin for simulating WAM-V dynamics-->
+    <!--Gazebo Plugin for simulating LPV-4 dynamics-->
     <plugin filename="libusv_gazebo_wind_plugin.so" name="wind">
       <!-- models to be effected by the wind -->
       <wind_obj>

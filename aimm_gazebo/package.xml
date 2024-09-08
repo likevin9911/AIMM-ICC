@@ -6,9 +6,11 @@
     The ROS package for the RobotX competition running in Gazebo.
   </description>
   <maintainer email="caguero@osrfoundation.org">Carlos Aguero</maintainer>
+  <maintainer email="kgli@mtu.edu">Kevin Li</maintainer>
   <maintainer email="jriveroo@osrfoundation.org">Jose Luis Rivero</maintainer>
   <license>Apache 2.0</license>
-  
+  <url type="website">http://wiki.ros.org/aimm_gazebo</url>
+  <url type="bugtracker">http://github.com/osrf/aimm/issues</url>
   <author email="briansbingham@gmail.com">Brian Bingham</author>
   <author email="caguero@osrfoundation.org">Carlos Aguero</author>
   <replace>vmrc_gazebo</replace>

@@ -11,7 +11,7 @@ def create_xacro_file(xacro_target,
                       param_test=lambda name, params={}: True,
                       ):
     """
-    Purpose: Create a .xacro file to create a custom WAM-V .urdf
+    Purpose: Create a .xacro file to create a custom LPV-4 .urdf
 
     Args:
         xacro_target (str): Target file for writing the xacro to
@@ -73,7 +73,7 @@ def add_gazebo_thruster_config(xacro_target,
                                ):
     """
     Purpose: Append gazebo thruster config tags to a .xacro file to
-             create a custom WAM-V .urdf
+             create a custom LPV-4 .urdf
 
     Args:
         xacro_target (str): Target file for writing the xacro to
@@ -103,7 +103,7 @@ def add_gazebo_thruster_config(xacro_target,
             xacro_file.close()
             return
 
-    # WAM-V Gazebo thrust plugin setup
+    # LPV-4 Gazebo thrust plugin setup
     for key, objects in requested_macros.items():
         for obj in objects:
             xacro_file.write('      ' +

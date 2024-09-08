@@ -24,7 +24,7 @@ def main():
     if received_component_yaml:
         component_compliant = create_component_xacro()
 
-    # Setup command to generate WAM-V urdf file
+    # Setup command to generate LPV-4 urdf file
     lpv_target = rospy.get_param('lpv_target')
     lpv_gazebo = rospy.get_param('lpv_gazebo')
     lpv_locked = rospy.get_param('lpv_locked')
@@ -58,7 +58,7 @@ def main():
                      'must be fixed for this to be a valid configuration ' +
                      'for the VRX competition.\n')
 
-    print('WAM-V urdf file sucessfully generated. File location: ' +
+    print('LPV-4 urdf file sucessfully generated. File location: ' +
           lpv_target)
 
 def create_thruster_xacro():

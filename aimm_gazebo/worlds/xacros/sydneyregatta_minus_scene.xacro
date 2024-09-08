@@ -33,7 +33,7 @@
       <uri>model://sydney_regatta</uri>
     </include>
 
-    <!-- The posts for securing the WAM-V -->
+    <!-- The posts for securing the LPV-4 -->
     <include>
       <name>post_0</name>
       <pose>-535.916809 154.362869 0.675884 -0.17182 0.030464 -0.005286</pose>
@@ -50,7 +50,7 @@
       <uri>model://post</uri>
     </include>
 
-    <!-- Antenna for communication with the WAM-V -->
+    <!-- Antenna for communication with the LPV-4 -->
     <include>
       <pose>-531.063721 147.668579 1.59471 -0.068142 0 -0.1</pose>
       <uri>model://antenna</uri>

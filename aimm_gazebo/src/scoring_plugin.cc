@@ -85,14 +85,14 @@ void ScoringPlugin::Load(gazebo::physics::WorldPtr _world,
   collisionSub = gzNode->Subscribe(collisionTopic,
                                           &ScoringPlugin::OnCollisionMsg, this);
 
-  if (char* env_dbg = std::getenv("AIMM_DEBUG"))
+  if (char* env_dbg = std::getenv("VRX_DEBUG"))
   {
     if (std::string(env_dbg) == "false")
       this->debug = false;
   }
   else
   {
-    gzwarn << "AIMM_DEBUG enviornment variable not set, defaulting to true"
+    gzwarn << "VRX_DEBUG enviornment variable not set, defaulting to true"
       << std::endl;
   }
   this->serverControlPub =
@@ -480,7 +480,7 @@ void ScoringPlugin::Exit()
 {
   bool exit = this->perPluginExitOnCompletion;
 
-  char* env = std::getenv("AIMM_EXIT_ON_COMPLETION");
+  char* env = std::getenv("VRX_EXIT_ON_COMPLETION");
   if (env != nullptr && std::string(env) == "true")
   {
     // Overwrite class variable if environment variable is specified
@@ -499,11 +499,11 @@ void ScoringPlugin::Exit()
   }
   else
   {
-    gzerr << "AIMM_EXIT_ON_COMPLETION and <per_plugin_exit_on_completion> "
+    gzerr << "VRX_EXIT_ON_COMPLETION and <per_plugin_exit_on_completion> "
       << "both not set, will not shutdown on ScoringPlugin::Exit()"
       << std::endl;
     ROS_ERROR_STREAM(
-      "AIMM_EXIT_ON_COMPLETION and <per_plugin_exit_on_completion> "
+      "VRX_EXIT_ON_COMPLETION and <per_plugin_exit_on_completion> "
       << "both not set, will not shutdown on ScoringPlugin::Exit()");
   }
   return;

@@ -15,8 +15,8 @@
  *
 */
 
-#ifndef AIMM_GAZEBO_SCAN_DOCK_SCORING_PLUGIN_HH_
-#define AIMM_GAZEBO_SCAN_DOCK_SCORING_PLUGIN_HH_
+#ifndef VRX_GAZEBO_SCAN_DOCK_SCORING_PLUGIN_HH_
+#define VRX_GAZEBO_SCAN_DOCK_SCORING_PLUGIN_HH_
 
 #include <ros/ros.h>
 #include <std_msgs/String.h>

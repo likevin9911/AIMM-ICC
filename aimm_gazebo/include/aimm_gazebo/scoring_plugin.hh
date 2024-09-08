@@ -15,8 +15,8 @@
  *
 */
 
-#ifndef AIMM_GAZEBO_SCORING_PLUGIN_HH_
-#define AIMM_GAZEBO_SCORING_PLUGIN_HH_
+#ifndef VRX_GAZEBO_SCORING_PLUGIN_HH_
+#define VRX_GAZEBO_SCORING_PLUGIN_HH_
 
 #include <ros/ros.h>
 #include <gazebo/msgs/gz_string.pb.h>
@@ -172,7 +172,7 @@ class ScoringPlugin : public gazebo::WorldPlugin
   /// \brief Get running duration
   protected: double GetRunningStateDuration() const;
 
-  /// \brief Get the number of WAM-V collisions.
+  /// \brief Get the number of LPV-4 collisions.
   protected: unsigned int GetNumCollisions() const;
 
   /// \brief Callback executed at every world update.
@@ -336,7 +336,7 @@ class ScoringPlugin : public gazebo::WorldPlugin
   /// \brief Whether to shut down after last gate is crossed.
   private: bool perPluginExitOnCompletion = true;
 
-  /// \brief Number of WAM-V collisions.
+  /// \brief Number of LPV-4 collisions.
   private: unsigned int numCollisions = 0u;
 };
 

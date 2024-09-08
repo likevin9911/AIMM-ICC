@@ -7,7 +7,7 @@ if(POLICY CMP0054)
   cmake_policy(SET CMP0054 OLD)
 endif()
 
-find_package(catkin REQUIRED COMPONENTS gazebo_dev gazebo_ros roscpp message_generation xacro wave_gazebo_plugins usv_msgs)
+find_package(catkin REQUIRED COMPONENTS gazebo_dev roscpp message_generation xacro wave_gazebo_plugins usv_msgs)
 find_package(Eigen3 REQUIRED)
 
 ###################################
@@ -103,8 +103,6 @@ install(TARGETS usv_gazebo_acoustic_pinger_plugin
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
 )
-
-
 
 set(XACRO_INORDER)
 if(DEFINED ENV{ROS_DISTRO})

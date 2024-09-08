@@ -39,7 +39,7 @@
       <frame>lpv</frame>
       <!-- Pose of each object is expressed relative to the body frame
            of the object named in the frame field - i.e., relative to
-           the lp-v-->
+           the wam-v-->
       <object_sequence>
         <object>
           <time>5</time>

@@ -3,10 +3,12 @@
   <name>lpv_gazebo</name>
   <version>1.3.0</version>
   <description>
-    Provides templates and examples for integrating the WAM-V model into gazebo with dynamics, sensors, etc.
+    Provides templates and examples for integrating the LPV-4 model into gazebo with dynamics, sensors, etc.
   </description>
   <maintainer email="caguero@osrfoundation.org">Carlos Aguero</maintainer>
+  <maintainer email="kgli@mtu.edu">Kevin Li</maintainer>
   <maintainer email="jriveroo@osrfoundation.org">Jose Luis Rivero</maintainer>
+  <maintainer email="kgli@mtu.edu">Kevin Li</maintainer>
   <license>Apache 2.0</license>
   <url type="website">http://wiki.ros.org/lpv_gazebo</url>
   <url type="bugtracker">http://github.com/osrf/aimm/issues</url>
@@ -18,7 +20,6 @@
   <depend>robot_localization</depend>
   <depend>usv_gazebo_plugins</depend>
   <depend>velodyne_gazebo_plugins</depend>
-  <depend>ainstein_radar_gazebo_plugins</depend>
   <depend>lpv_description</depend>
   <depend>xacro</depend>
 </package>

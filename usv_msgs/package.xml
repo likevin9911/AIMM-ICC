@@ -7,6 +7,7 @@
   Competition. </description>
 
   <maintainer email="jonathan.wheare@flinders.edu.au">Jonathan Wheare</maintainer>
+  <maintainer email="kgli@mtu.edu">Kevin Li</maintainer>
   <license>Apache 2.0</license>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>message_generation</build_depend>

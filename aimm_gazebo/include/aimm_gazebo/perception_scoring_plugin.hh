@@ -20,8 +20,8 @@
  * PopulationPlugin https://bitbucket.org/osrf/ariac/src/master/osrf_gear/include/osrf_gear/PopulationPlugin.hh
 */
 
-#ifndef AIMM_GAZEBO_PERCEPTION_SCORING_PLUGIN_HH_
-#define AIMM_GAZEBO_PERCEPTION_SCORING_PLUGIN_HH_
+#ifndef VRX_GAZEBO_PERCEPTION_SCORING_PLUGIN_HH_
+#define VRX_GAZEBO_PERCEPTION_SCORING_PLUGIN_HH_
 
 #include <geographic_msgs/GeoPoseStamped.h>
 #include <ros/ros.h>

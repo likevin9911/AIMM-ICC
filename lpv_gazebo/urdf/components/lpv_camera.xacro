@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="lpv_camera" params="name x:=0.5 y:=0 z:=1.5 post_z_from:=1.2965 R:=0 P:=0 Y:=0 post_Y:=0 visualize:=False">
+  <xacro:macro name="lpv_camera" params="name x:=0.5 y:=0 z:=0 post_z_from:=0.35 R:=0 P:=0 Y:=0 post_Y:=0 visualize:=False">
     <!-- Define length variables for link positioning -->
     <xacro:property name="platform_z" value="${post_z_from}"/>
     <xacro:property name="post_to_post_arm_x" value="0.03"/>
@@ -12,7 +12,7 @@
       <visual name="${name}_visual">
         <origin xyz="-0.033 0 0" rpy="0 0 ${pi/2}"/>
         <geometry>
-          <mesh filename="package://lpv_gazebo/models/mono_camera/mesh/mono_camera.dae"/>
+          <mesh filename="package://aimm_gazebo/models/mono_camera/mesh/mono_camera.dae"/>
         </geometry>
       </visual>
       <collision name="${name}_lens_collision">

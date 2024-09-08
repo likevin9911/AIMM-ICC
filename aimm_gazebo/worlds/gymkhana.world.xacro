@@ -48,7 +48,7 @@
       <initial_state_duration>10</initial_state_duration>
       <ready_state_duration>10</ready_state_duration>
       <running_state_duration>300</running_state_duration>
-      <!-- Per-plugin flag, different from env var AIMM_EXIT_ON_COMPLETION.
+      <!-- Per-plugin flag, different from env var VRX_EXIT_ON_COMPLETION.
            Respect top-level plugin finished status. -->
       <per_plugin_exit_on_completion>true</per_plugin_exit_on_completion>
       <obstacle_penalty>1</obstacle_penalty>
@@ -62,7 +62,7 @@
       <vehicle>lpv</vehicle>
       <task_name>gymkhana_channel</task_name>
       <task_info_topic>/aimm/gymkhana_channel/task/info</task_info_topic>
-      <contact_debug_topic>/lpv/gymkhana_channel/debug/contact</contact_debug_topic>
+      <contact_debug_topic>/aimm/gymkhana_channel/debug/contact</contact_debug_topic>
       <!-- Keep Gazebo running after this sub-task is completed -->
       <per_plugin_exit_on_completion>false</per_plugin_exit_on_completion>
       <initial_state_duration>10</initial_state_duration>

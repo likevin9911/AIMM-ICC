@@ -33,7 +33,7 @@
       <uri>model://sandisland</uri>
     </include>
 
-    <!-- The posts for securing the WAM-V -->
+    <!-- The posts for securing the LPV-4 -->
     <include>
       <name>post_0</name>
       <pose>169.22 112.06 0.47 0.046 -0.157 0</pose>
@@ -50,7 +50,7 @@
       <uri>model://post</uri>
     </include>
 
-    <!-- Antenna for communication with the WAM-V -->
+    <!-- Antenna for communication with the LPV-4 -->
     <include>
       <pose>175.69 114.29 1.37 0 0 2.00</pose>
       <uri>model://antenna</uri>

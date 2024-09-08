@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- Include macros for dynamics plugins -->
   <xacro:include filename="$(find lpv_gazebo)/urdf/macros.xacro" />
-  <!-- Macro to create a WAM-V with dyanmics plugins and a customizeable thruster layout -->
+  <!-- Macro to create a LPV-4 with dyanmics plugins and a customizeable thruster layout -->
   <xacro:macro  name="lpv_gazebo" params="thruster_layout">
     <!-- Defines the base vehicle -->
     <xacro:include filename="$(find lpv_description)/urdf/lpv_base.urdf.xacro" />
