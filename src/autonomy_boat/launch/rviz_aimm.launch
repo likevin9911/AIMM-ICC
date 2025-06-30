@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+  
+  <arg name="urdf" default="$(find aimm_description)/urdf/master.urdf.xacro"/>
+
+  <param name="robot_description"
+         command="$(find xacro)/xacro --inorder '$(arg urdf)'" />
+
+  <!-- Publish TFs from your URDF -->
+  <node pkg="robot_state_publisher"
+        type="robot_state_publisher"
+        name="robot_state_publisher" />
+
+  <!-- Publish joint states (static since gui=false) -->
+  <node pkg="joint_state_publisher"
+        type="joint_state_publisher"
+        name="joint_state_publisher">
+    <param name="gui" value="false"/>
+  </node>
+
+  <arg name="rviz_config" default="$(find aimm_description)/rviz/rviz_aimm.rviz" />
+  <node pkg="rviz" type="rviz"
+        name="viz" args="-d $(arg rviz_config)" />
+</launch>

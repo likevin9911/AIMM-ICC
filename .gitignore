@@ -1,0 +1,9 @@
+build/ 
+install/
+log/
+*.pyc
+__pyache__/
+*.swp
+.vscode/
+.idea/
+

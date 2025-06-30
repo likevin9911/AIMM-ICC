@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="use_sim_time" default="false" />
+  <arg name="gui" default="false" />
+  <arg name="headless" default="true" />
+  <arg name="world_name" default="$(find autonomy_boat)/World/E.world" />
+  <arg name="front_laser" default="true" />
+  <arg name="default_config" value="front_laser" if="$(arg front_laser)" />
+  <arg name="default_config" value="base" unless="$(arg front_laser)" />
+
+  <include file="$(find autonomy_boat)/launch/usv_bringup.launch">
+    <arg name="gui" value="false"/>
+  </include>
+  
+  
+
+  <include file="$(find autonomy_boat)/launch/include/pointcloud2laserscan.launch" />
+  
+  <param name="use_gui" value="true"/>
+  <node name="rviz_boat" pkg="rviz" type="rviz" args="-d $(find autonomy_boat)/rviz/jackal_test.rviz"/>
+  <node name="rviz_boat2" pkg="rviz" type="rviz" args="-d $(find autonomy_boat)/rviz/jackal_test.rviz"/>
+
+</launch>

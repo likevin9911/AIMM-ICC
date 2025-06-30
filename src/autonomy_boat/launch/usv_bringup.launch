@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- No change for gmapping -->
+	<arg name="override_location" default="true" />
+	<arg name="x" default="158" />
+	<arg name="y" default="108" />
+	<arg name="yaw" default="0" />
+	<arg name="gui" default="false" />
+	<arg name="world_name" default="RAITE"/>
+	<arg name="verbose" default="true"/>
+   <arg name="world_name2" default="$(find autonomy_boat)/World/E.world" />
+
+
+   <include file="$(find autonomy_boat)/launch/$(arg world_name).launch">
+      <arg name="urdf"           value="$(find autonomy_boat)/config/aimm.urdf"/>
+      <arg name="gui"            value="$(arg gui)" />
+      <arg name="verbose"        value="$(arg verbose)"/>
+   </include>
+  	
+  	
+   <!--node name="odom_relay" pkg="topic_tools" type="relay" args="robot_localization/odometry/filtered odom" /
+   
+  
+      <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+         <remap from="cloud_in" to="sensors/lidars/lidar_points" />
+         <remap from="scan" to="sensors/lidars/lidar/scan" />
+      </node>-->
+          
+      <node name="odom_filtered_relay" pkg="topic_tools" type="relay" args="robot_localization/odometry/filtered odom" />
+          
+      <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+         <param name="publish_frequency" value="60" />
+         <!--param name"tf_prefix" value="wamv"/-->
+      </node>
+            <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+         <param name="publish_frequency" value="60" />
+         <!--param name"tf_prefix" value="wamv"/-->
+      </node>
+         
+
+      <!-- <node name="wamv_tf_expander" pkg="usv_navigation" type="wamv_tf_expander.py" /> -->
+
+</launch>

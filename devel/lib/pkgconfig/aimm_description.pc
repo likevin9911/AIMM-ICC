@@ -1,0 +1,8 @@
+prefix=/home/ppninja/AIMM/devel
+
+Name: aimm_description
+Description: Description of aimm_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

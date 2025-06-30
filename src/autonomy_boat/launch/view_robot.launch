@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load the URDF -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find autonomy_boat)/config/aimm.urdf'" />
+
+  <!-- Publish the state of joints -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <!-- Publish robot_state tf -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- Launch RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find autonomy_boat)/rviz/aimm.rviz" />
+</launch>
+
