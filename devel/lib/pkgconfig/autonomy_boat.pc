@@ -1,8 +1,0 @@
-prefix=/home/ppninja/AIMM/devel
-
-Name: autonomy_boat
-Description: Description of autonomy_boat
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

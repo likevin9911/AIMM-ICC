@@ -6,4 +6,5 @@ __pyache__/
 *.swp
 .vscode/
 .idea/
-
+aimm_gazebo_plugins/
+CMakeLists.txt

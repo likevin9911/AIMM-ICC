@@ -1,8 +1,0 @@
-prefix=/home/ppninja/AIMM/devel
-
-Name: aimm_gazebo_plugins
-Description: Description of aimm_gazebo_plugins
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
