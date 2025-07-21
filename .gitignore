@@ -1,0 +1,78 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+.colcon/
+.colcon_install_layout
+
+# Python virtual environments
+venv/
+zed-venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# CMake and Make artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Compiled object and binary files
+*.o
+*.so
+*.so.*
+*.a
+*.out
+*.bin
+*.dll
+*.exe
+
+# Jetson / general cache
+*.swp
+*.bak
+*.tmp
+*.log
+*.nv
+*.nvcache
+*.cu.o
+
+# IDE and system files
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# ROS bag and test logs
+*.bag
+*.db3
+*.sqlite3
+*.testlog
+test_results/
+launch_logs/
+
+# Large archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.bz2
+*.xz
+
+# Exclude packages only if they’re large and not needed in repo
+# (If you want to track these, REMOVE them from .gitignore!)
+marine_radar_control_msgs/
+mavros/
+navigation2/
+ouster-ros/
+robot_description/
+robot_localization/
+robot_slam/
+ros2_ouster_drivers/
+simrad_halo20_radar/
+SMACC2/
+zed-ros2-examples/
+zed-ros2-wrapper/
+zed-sdk/
+zed-yolo/
+
